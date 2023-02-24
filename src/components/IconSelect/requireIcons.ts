@@ -1,0 +1,9 @@
+const icons: any[] = []
+const modules = import.meta.glob('./../../assets/icons/*.svg')
+// eslint-disable-next-line guard-for-in
+for (const path in modules) {
+  const p = path.split('assets/icons/')[1].split('.svg')[0]
+  icons.push(p)
+}
+
+export default icons
